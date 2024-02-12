@@ -30,6 +30,13 @@ sudo reboot 重新启动后。
 
 如果您不想使用GUI界面，可以切换回命令行界面。在CentOS或其他使用systemd的Linux发行版上，可以通过以下命令设置默认的目标为多用户文本模式：
 sudo systemctl set-default multi-user.target
+就会有这样的代码产生：
+
+![Uploading 屏幕截图 2024-02-12 163734.png…]()
+
+
+
+
 然后重启系统，系统将在没有启动GUI的情况下启动到命令行模式。您也可以在不重启的情况下临时切换到文本模式，使用如下命令：
 sudo systemctl isolate multi-user.target
 
