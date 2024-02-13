@@ -37,9 +37,20 @@ sudo systemctl set-default multi-user.target
 
 
 
+
 然后重启系统，系统将在没有启动GUI的情况下启动到命令行模式。您也可以在不重启的情况下临时切换到文本模式，使用如下命令：
 sudo systemctl isolate multi-user.target
 
 这样就都可以使用了。
+
+
+对于Centos无法正常启动ens33网卡的情况：
+#依次执行
+chkconfig NetworkManager off
+chkconfig network on
+service NetworkManager stop
+service network start
+ifup ens33
+即可解决
 
 
